@@ -26,4 +26,11 @@ public class TestSettelment {
         Bill bill = new Bill(1.0, friend);
         assertEquals(1.0, bill.settelment());
     }
+    @Test
+    void ShouldAddTotalPaidInFriendClass_WhenSettelmentCalled_ThenReturnTotalAmount()
+    {
+        Friend friend=new Friend("ram");
+        Bill bill=new Bill(1.0,friend);
+        assertEquals(1.0,bill.settelment());
+    }
 }

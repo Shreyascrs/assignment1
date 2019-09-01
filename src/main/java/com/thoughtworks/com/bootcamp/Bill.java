@@ -12,6 +12,7 @@ public class Bill {
 
     public double settelment() {
 
+        paidBy.setpaid(totalAmount);
         return totalAmount;
     }
 }
