@@ -1,6 +1,6 @@
 package com.thoughtworks.com.bootcamp;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class TestSettelment {
@@ -8,7 +8,12 @@ public class TestSettelment {
     @Test
     void ShouldAddBillWithZeroTotalAmount_WhenSettelmentcalled_thenRetuernZero()
     {
-        Bill bill=new Bill(0.0f);
-        Assertions.assertEquals(0.0f,bill.settelment());
+        Bill bill=new Bill(0.0);
+        assertEquals(0.0,bill.settelment());
+    }
+    void ShouldAddBillWithNonZeroTotalAmount_WhenSettelmentCalled_ThenReturnNonZero()
+    {
+        Bill bill=new Bill(1.0);
+        assertEquals(1.0,bill.settelment());
     }
 }
